@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "JPDBreader＋α v3",
+  "version": "1.0",
+  "description": "JPDB parsing and mining in your browser",
+  "icons": {
+    "16": "icons/logo_16.png",
+    "24": "icons/logo_24.png",
+    "32": "icons/logo_32.png",
+    "48": "icons/logo_48.png",
+    "64": "icons/logo_64.png",
+    "96": "icons/logo_96.png",
+    "128": "icons/logo_128.png"
+  },
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "browser_popup/popup.html",
+    "default_icon": {
+      "16": "icons/logo_16.png",
+      "24": "icons/logo_24.png",
+      "32": "icons/logo_32.png",
+      "48": "icons/logo_48.png",
+      "64": "icons/logo_64.png",
+      "96": "icons/logo_96.png",
+      "128": "icons/logo_128.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content/service_worker_comms.js",
+        "content/progressbar.js",
+        "content/dialog.js",
+        "content/dialog.css",
+        "content/popup.js",
+        "content/popup.css",
+        "content/word.js",
+        "content/word.css",
+        "content/toast.js",
+        "content/toast.css",
+        "util.js",
+        "jsx.js",
+        "common.css",
+        "themes.css"
+      ],
+      "matches": ["*://*"]
+    }
+  ],
+  "permissions": ["storage", "activeTab", "*://jpdb.io/*"]
+}
